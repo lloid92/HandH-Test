@@ -96,14 +96,14 @@
                                                     <action selector="touchLoginButton" destination="zlK-Cf-AHS" eventType="touchUpInside" id="ITm-WX-Mga"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgB-Ep-Pxg" customClass="InputTextField" customModule="HandH" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgB-Ep-Pxg" customClass="InputTextField" customModule="HandH">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="2K1-X6-lCN"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aE-PK-Emc" customClass="InputPasswordField" customModule="HandH" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aE-PK-Emc" customClass="InputTextField" customModule="HandH">
                                                 <rect key="frame" x="0.0" y="57" width="375" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>

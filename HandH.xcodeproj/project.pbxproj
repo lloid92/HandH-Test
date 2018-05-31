@@ -19,8 +19,6 @@
 		88D592AE20B56FCC0030CDF8 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D592AB20B56FC80030CDF8 /* InputTextField.swift */; };
 		88D592B120B574170030CDF8 /* InputTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D592B020B574170030CDF8 /* InputTextField.xib */; };
 		88D592B420B576970030CDF8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D592B320B576970030CDF8 /* View.swift */; };
-		88E2F49920BBB86400A74A2C /* InputPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2F49820BBB86400A74A2C /* InputPasswordField.swift */; };
-		88E2F49B20BBBC5C00A74A2C /* InputPasswordField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E2F49A20BBBC5C00A74A2C /* InputPasswordField.xib */; };
 		88E2F49D20BBCA6B00A74A2C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2F49C20BBCA6B00A74A2C /* String.swift */; };
 		88E2F49F20BBD5AB00A74A2C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2F49E20BBD5AB00A74A2C /* Image.swift */; };
 		B220739710C6BCBCC79E12DE /* Pods_HandH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8D76A170818B4713833EDB /* Pods_HandH.framework */; };
@@ -42,8 +40,6 @@
 		88D592AB20B56FC80030CDF8 /* InputTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		88D592B020B574170030CDF8 /* InputTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextField.xib; sourceTree = "<group>"; };
 		88D592B320B576970030CDF8 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		88E2F49820BBB86400A74A2C /* InputPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordField.swift; sourceTree = "<group>"; };
-		88E2F49A20BBBC5C00A74A2C /* InputPasswordField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputPasswordField.xib; sourceTree = "<group>"; };
 		88E2F49C20BBCA6B00A74A2C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		88E2F49E20BBD5AB00A74A2C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B74E34250BAD39CAD95FEA16 /* Pods-HandH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HandH/Pods-HandH.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				8880BB9020BD5D7E00D165B9 /* Layer Label */,
-				88E2F49720BBB84700A74A2C /* Input Password Field */,
 				88D592AA20B56FC80030CDF8 /* Input Text Field */,
 			);
 			path = View;
@@ -166,15 +161,6 @@
 				88E2F49E20BBD5AB00A74A2C /* Image.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		88E2F49720BBB84700A74A2C /* Input Password Field */ = {
-			isa = PBXGroup;
-			children = (
-				88E2F49820BBB86400A74A2C /* InputPasswordField.swift */,
-				88E2F49A20BBBC5C00A74A2C /* InputPasswordField.xib */,
-			);
-			path = "Input Password Field";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D592B120B574170030CDF8 /* InputTextField.xib in Resources */,
-				88E2F49B20BBBC5C00A74A2C /* InputPasswordField.xib in Resources */,
 				8817E7CD20B415C7004A21B3 /* LaunchScreen.storyboard in Resources */,
 				8817E7CA20B415C7004A21B3 /* Assets.xcassets in Resources */,
 				8817E7C820B415C2004A21B3 /* Main.storyboard in Resources */,
@@ -294,7 +279,6 @@
 				8880BB9220BD5D7E00D165B9 /* LayerLabel.swift in Sources */,
 				88D592AE20B56FCC0030CDF8 /* InputTextField.swift in Sources */,
 				88E2F49D20BBCA6B00A74A2C /* String.swift in Sources */,
-				88E2F49920BBB86400A74A2C /* InputPasswordField.swift in Sources */,
 				88D592B420B576970030CDF8 /* View.swift in Sources */,
 				8849C75D20BBDCC200277401 /* Weather.swift in Sources */,
 				8817E7D720B41C2A004A21B3 /* AuthorizationViewController.swift in Sources */,

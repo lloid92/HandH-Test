@@ -14,7 +14,7 @@ class AuthorizationViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet var loginInputView: InputTextField!
-    @IBOutlet var passwordInputView: InputPasswordField!
+    @IBOutlet var passwordInputView: InputTextField!
     
     @IBOutlet var loginButton: UIButton!
     
@@ -22,7 +22,7 @@ class AuthorizationViewController: UIViewController {
     
     // MARK: - Variable
     
-    var password: String?
+    var password: String = ""
     
     // MARK: - View Controller Cycle
     
@@ -31,9 +31,11 @@ class AuthorizationViewController: UIViewController {
         super.viewDidLoad()
         
         loginInputView.labelText = "Почта"
+        loginInputView.isPassword = false
         loginInputView.delegate = self
         
         passwordInputView.labelText = "Пароль"
+        passwordInputView.isPassword = true
         passwordInputView.delegate = self
         passwordInputView.passwordButton.addTarget(self, action: #selector(touchForgetPassword), for: .touchUpInside)
         
@@ -106,7 +108,7 @@ class AuthorizationViewController: UIViewController {
             isError = true
         }
         
-        if !(password?.isValidPassword() ?? false) {
+        if !password.isValidPassword() {
             passwordInputView.isError = true
             isError = true
         }
@@ -150,7 +152,10 @@ extension AuthorizationViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if let inputTextView = textField.superview?.superview as? InputTextField {
             inputTextView.textFieldShouldBeginEditing()
-            if inputTextView == passwordInputView { password = "" }
+            if inputTextView.isPassword {
+                textField.text = ""
+                password = ""
+            }
         }
         return true
     }
@@ -169,34 +174,25 @@ extension AuthorizationViewController: UITextFieldDelegate {
             
             // Replace dot with asterisk in password
             
-            if inputTextView == passwordInputView {
+            if inputTextView.isPassword {
                 
                 let char = string.cString(using: .utf8)
                 let isBackspaceChar = strcmp(char, "\\b")
-                
+
                 if isBackspaceChar == -92 {
-                    
-                    if password != nil {
-                        password = String(password!.dropLast())
-                    }
-                    
+
+                    password = String(password.dropLast())
                     return true
-                    
+
                 } else {
-                    
-                    if password == nil {
-                        password = string
-                    } else {
-                        let nsPassword = password! as NSString
-                        password = nsPassword.replacingCharacters(in: range, with: string)
-                    }
 
-                    passwordInputView.textField.text = String.init(repeating: "*", count: password!.count)
-
+                    let nsPassword = password as NSString
+                    password = nsPassword.replacingCharacters(in: range, with: string)
+                    inputTextView.textField.text = String.init(repeating: "*", count: password.count)
                     return false
-                    
+
                 }
-                
+ 
             }
             
         }

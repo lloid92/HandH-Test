@@ -21,6 +21,8 @@ class InputTextField: UIView {
     
     @IBOutlet weak var underline: UIView!
     
+    @IBOutlet weak var passwordButton: UIButton!
+    
     // MARK: - Variable
     
     let tap = UITapGestureRecognizer()
@@ -28,6 +30,14 @@ class InputTextField: UIView {
     var labelText: String = "" {
         didSet {
             label.setLayerText(labelText)
+        }
+    }
+
+    var isPassword: Bool! {
+        didSet {
+            if !isPassword {
+                passwordButton?.removeFromSuperview()
+            }
         }
     }
     
@@ -69,6 +79,7 @@ class InputTextField: UIView {
         setupTextField()
         setupUnderline()
         setupTap()
+        setupButton()
         
     }
     
@@ -93,6 +104,22 @@ class InputTextField: UIView {
     func setupUnderline() {
         
         underline.backgroundColor = UIColor.handh.white()
+        
+    }
+    
+    func setupButton() {
+        
+        let buttonTitle = NSAttributedString.init(
+            string: "Забыли пароль?",
+            attributes: [.font : UIFont.systemFont(ofSize: 12.0),
+                         .foregroundColor : UIColor.handh.warmGrey(),
+                         .kern : -0.2]
+        )
+        
+        passwordButton.setAttributedTitle(buttonTitle, for: .normal)
+        passwordButton.layer.cornerRadius = 4.0
+        passwordButton.layer.borderColor = UIColor.handh.white().cgColor
+        passwordButton.layer.borderWidth = 0.4
         
     }
     
